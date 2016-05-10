@@ -44,7 +44,7 @@
 		hook.filter = function( event, originalEvent ) {
 			var touch;
 			var i = mouseProps.length;
-			if ( !originalEvent.pageX && originalEvent.touches && (touch = originalEvent.touches[0]) ) {
+			if ( originalEvent.touches && (touch = originalEvent.touches[0]) ) {
 				// Copy over all mouse properties
 				while(i--) {
 					event[mouseProps[i]] = touch[mouseProps[i]];

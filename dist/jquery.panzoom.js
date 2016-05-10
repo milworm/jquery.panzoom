@@ -1,6 +1,6 @@
 /**
- * @license jquery.panzoom.js v2.0.5
- * Updated: Mon Feb 01 2016
+ * @license jquery.panzoom.js v2.0.6
+ * Updated: Tue May 10 2016
  * Add pan and zoom functionality to any element
  * Copyright (c) timmy willison
  * Released under the MIT license
@@ -49,7 +49,7 @@
 		hook.filter = function( event, originalEvent ) {
 			var touch;
 			var i = mouseProps.length;
-			if ( !originalEvent.pageX && originalEvent.touches && (touch = originalEvent.touches[0]) ) {
+			if ( originalEvent.touches && (touch = originalEvent.touches[0]) ) {
 				// Copy over all mouse properties
 				while(i--) {
 					event[mouseProps[i]] = touch[mouseProps[i]];
